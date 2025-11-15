@@ -1,0 +1,25 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from time import sleep
+driver = webdriver.Chrome()
+
+url = "https://www.guvi.in/"
+
+driver.get(url)
+
+driver.maximize_window()
+
+sleep(2)
+
+driver.find_element(By.ID, "login-btn").click()
+
+sleep(2)
+
+webelement_of_email_input = driver.find_element(By.ID,"email")
+webelement_of_email_input.send_keys("mohanrpk@gmail.com")
+
+webelement_of_email_input = driver.find_element(By.ID,"password")
+webelement_of_email_input.send_keys("Mohan@1108")
+
+sleep(2)
+
